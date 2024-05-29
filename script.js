@@ -101,7 +101,12 @@ let result = info1.concat(info2);
     //     alert("pH value: " + randomNumber);
     //   }
 
+    // document.getElementById('randomButton').addEventListener('click', function() {
+    //     const randomNumber = Math.floor(Math.random() * 6.9) + 1;
+    //     alert('pH value: ' + randomNumber);
+    // });
+
     document.getElementById('randomButton').addEventListener('click', function() {
-        const randomNumber = Math.floor(Math.random() * 6.9) + 1;
+        const randomNumber = (Math.random() * (6.9 - 5.1) + 5.1).toFixed(1);
         alert('pH value: ' + randomNumber);
     });

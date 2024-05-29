@@ -44,6 +44,12 @@
 
 }
 
+.weather1 span{
+    font-size: 4rem;
+
+}
+
+
 .weather2 p {
     font-size: 2rem;
 }
@@ -104,3 +110,52 @@ nav form button{
 
 
 }
+
+nav form button:hover {
+    /* background-color: #0c251d; */
+    background-color: #003826;
+}
+
+.weather4 {
+    font-size: 4rem;
+
+}
+
+.weather5 {
+    font-size: 4rem;
+
+}
+/* button{
+    background-color: hsla(0, 0%, 0%, 0.777);
+    border-radius: 20px 25px 25px ;
+    font-size: 1.1rem;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+} */
+
+#randomButton {
+    padding: 20px 35px;
+    /* font-size: 26px; */
+    font-size: 1.8rem;
+    color: #fff;
+    /* background-color: #007BFF; */
+    background-color: rgba(5, 69, 52, 0.777);
+    border: none;
+    /* border-radius: 5px; */
+    border-radius: 0 25px 25px ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#randomButton:hover {
+    background-color: #2d4e44;
+    color: #58718a;
+    text-decoration: wavy;
+    font-weight: bold;
+}
+

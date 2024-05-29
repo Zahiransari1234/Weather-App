@@ -44,7 +44,7 @@ let result = info1.concat(info2);
   function updateDom(temperate, city, time, emoji, text, humidity, cloud){
     temperateField.innerText = temperate + "°C";
     humidityField.innerText =   humidity + "H";
-    cloudField.innerText = cloud + "%";
+    cloudField.innerText = cloud + "mm";
     cityField.innerText = city;
 
 
@@ -106,7 +106,26 @@ let result = info1.concat(info2);
     //     alert('pH value: ' + randomNumber);
     // });
 
+    // document.getElementById('randomButton').addEventListener('click', function() {
+    //     const randomNumber = (Math.random() * (6.95555 - 5.15555) + 5.1).toFixed(1);
+    //     alert('pH value: ' + randomNumber);
+    // });
+
+    // document.getElementById('randomButton').addEventListener('click', function() {
+    //     const min = 5.1;
+    //     const max = 6.9;
+    //     const randomNumber = (Math.random() * (max - min) + min).toFixed(1);
+    //     alert('pH value: ' + randomNumber);
+    // });
+
     document.getElementById('randomButton').addEventListener('click', function() {
-        const randomNumber = (Math.random() * (6.9 - 5.1) + 5.1).toFixed(1);
-        alert('pH value: ' + randomNumber);
+        // Generate a random decimal value between 5.11111 and 6.95555
+        const min = 5.11111;
+        const max = 6.95555;
+        const randomNumber = Math.random() * (max - min) + min;
+        
+        // Round the number to 5 decimal places
+        const roundedNumber = randomNumber.toFixed(5);
+        
+        alert('pH value: ' + roundedNumber);
     });

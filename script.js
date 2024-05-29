@@ -3,10 +3,16 @@
   const dateField = document.querySelector(".weather2 span");
   const emojiField = document.querySelector(".weather3 img");
   const weatherField = document.querySelector(".weather3 span");
+  const humidityField = document.querySelector(".weather4");
+  const cloudField = document.querySelector(".weather4");
   const searchField = document.querySelector(".searchField");
   const form = document.querySelector("form");
 
 let target = "kolkata";
+
+let info1 = "temp_c";
+let info2 = "°c";
+let result = info1.concat(info2);
 
   const fetchData = async (target) =>{
 
@@ -21,21 +27,26 @@ let target = "kolkata";
     const {
       current: {
           temp_c, 
+          humidity,
+          cloud,
           condition:{ text, icon},
   },
       location: { name,localtime},
     } = data;
   
-    updateDom(temp_c, name, localtime, icon, text);
+    updateDom(temp_c, name, localtime, icon, text, humidity, cloud);
  } 
  catch (error) {
     alert("Location Not Found");
  }
   };
 
-  function updateDom(temperate, city, time, emoji, text){
+  function updateDom(temperate, city, time, emoji, text, humidity, cloud){
     temperateField.innerText = temperate;
+    humidityField.innerText = humidity;
+    humidityField.innerText = cloud;
     cityField.innerText = city;
+
 
     const exactTime = time.split(" ")[1];
     const exactDate = time.split(" ")[0];
@@ -84,3 +95,13 @@ let target = "kolkata";
   
           }
       }
+
+    //   function generateRandomNumber() {
+    //     var randomNumber = Math.floor(Math.random() * 100) + 1;
+    //     alert("pH value: " + randomNumber);
+    //   }
+
+    document.getElementById('randomButton').addEventListener('click', function() {
+        const randomNumber = Math.floor(Math.random() * 100) + 1;
+        alert('pH value: ' + randomNumber);
+    });

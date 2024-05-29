@@ -42,9 +42,9 @@ let result = info1.concat(info2);
   };
 
   function updateDom(temperate, city, time, emoji, text, humidity, cloud){
-    temperateField.innerText = temperate;
-    humidityField.innerText = humidity;
-    humidityField.innerText = cloud;
+    temperateField.innerText = temperate + "°C";
+    humidityField.innerText = humidity + "H";
+    humidityField.innerText = cloud + "R";
     cityField.innerText = city;
 
 
@@ -102,6 +102,6 @@ let result = info1.concat(info2);
     //   }
 
     document.getElementById('randomButton').addEventListener('click', function() {
-        const randomNumber = Math.floor(Math.random() * 100) + 1;
+        const randomNumber = Math.floor(Math.random() * 6.9) + 1;
         alert('pH value: ' + randomNumber);
     });
